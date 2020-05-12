@@ -18,7 +18,7 @@ docker run --restart unless-stopped --device=/dev/video0 -p 8554:8554 -itd --nam
 
 ```
 docker build -t rtsp-to-mjpeg .
-docker run --restart unless-stopped -itd -p 8080:8080 --name rtsp-to-mjpeg --env CAMERAIP=192.168.86.43 --env CAMERAPORT=8554 rtsp-to-mjpeg
+docker run --restart unless-stopped -itd -p 8080:8080 --name rtsp-to-mjpeg --env CAMERAIP=192.168.86.43 --env CAMERAPORT=8554 mikekock/rtsp-to-mjpeg
 ```
 
 Converting the video stream takes a decent amount of CPU. Reducing the resolution and FPS of the source RSTP video feed can help reduce the
